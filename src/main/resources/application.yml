@@ -1,0 +1,19 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:mem:auth-auth
+    username: sa
+    password:
+  jpa:
+    open-in-view: false
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create-drop
+    defer-datasource-initialization: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
