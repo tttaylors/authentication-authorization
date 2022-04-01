@@ -11,17 +11,16 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
             .authorizeRequests()
-                .antMatchers("/api/test").hasAnyRole("ADM")
-                .antMatchers("/test").hasAnyRole("OPERATOR")
+                .antMatchers("/clients").hasAnyRole("ADM")
                 .anyRequest()
                 .authenticated()
             .and()
-            .formLogin()
-                .loginPage("/login")
-                .permitAll()
-            .and()
-                .logout()
-                .logoutSuccessUrl("/login?logout")
-                .permitAll();
+            .formLogin();
+//                .loginPage("/login")
+//                .permitAll()
+//            .and()
+//                .logout()
+//                .logoutSuccessUrl("/login?logout")
+//                .permitAll();
     }
 }

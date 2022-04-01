@@ -11,7 +11,7 @@ public class InMemorySecurityConfig {
     public void configureGlobalConfiguration(AuthenticationManagerBuilder auth) throws Exception {
         auth
                 .inMemoryAuthentication()
-                    .withUser("user01").password("{noop}abc").roles("ADM")
+                    .withUser("user01").password("{noop}123").roles("ADM")
                 .and()
                     .withUser("user02").password("{noop}123").roles("OPERATOR");
     }
